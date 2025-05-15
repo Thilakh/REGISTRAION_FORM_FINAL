@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+    @media only screen and (max-width:600px){
+        body{
+           background-image: url('demo3.jpg');
+            background-size: fill;
+        }
+
+        button.submit-btn{
+            background-color: aqua;
+        }
+    }
+    @media only screen and (min-width:768px){
+        body{
+            background-image: url('demo1.avif');
+            background-size: fill;
+        }
+        button.submit-btn{
+            background-color: red;
+        }
+    }
+    @media only screen and (min-width:1024px){
+        body{
+            background-image: url('demo2.jpg');
+            background-size: fill;
+        }
+        button.submit-btn{
+            background-color: yellowgreen;
+        }
+    }
+</style>
+<body>
+    <div class="tooltip">
+        <img src="avatar1.avif" class="avatar">
+        <span class="tooltiptext">Thilakh</span>
+    </div>
+    <div class="form-container">
+        <form>
+            <div class="Row">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Thilakh"/>
+                </div>
+                <div>
+                    <label>Class:</label>
+                    <select>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                        <option value="V">V</option>
+                        <option value="VI">VI</option>
+                        <option value="VII">VII</option>
+                        <option value="VIII">VIII</option>
+                        <option value="IX">IX</option>
+                        <option value="X">X</option>
+                        <option value="XI">XI</option>
+                        <option value="XII">XII</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Section:</label>
+                    <input type="radio" id="a" name="section" value="A"/>
+                    <label for="a">A</label>
+                    <input type="radio" id="b" name="section" value="B"/>
+                    <label for="b">B</label>
+                    <input type="radio" id="c" name="section" value="C"/>
+                    <label for="c">C</label>
+                    <input type="radio" id="d" name="section" value="D"/>
+                    <label for="d">D</label>
+                </div>
+                <div>
+                    <label>School:</label>
+                    <textarea rows="4" cols="50"></textarea>
+                </div>
+                <div>
+                    <label>Rank:</label>
+                    <h2>II</h2>
+                </div>
+            </div>
+        </form>
+        <div class="submit-b">
+           <button class="submit-btn"> submit</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* div{
+        width: 100%;
+        height: auto;
+        background-image: url('dummy.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 1px solid red;
+    } */
+    /* img{
+        max-width: 100%;
+        height: auto;
+    } */
+    div.example{
+        background-color: yellow;
+    }
+    body{
+        background-color: black;
+    }
+    @media only screen and (max-width:600px){
+        
+        body{
+            background-color: aqua;
+        }
+    }
+    /* @media only screen and (orientation:Portrait){
+        body{
+            background-color: black;
+           
+        }
+    } */
+    @media only screen and (min-width:600px){
+        /* div.example{
+            display: none;
+            font-size: 30px;
+        } */
+        body{
+            background-color: rgb(68, 255, 0);
+            background-image: url('dummy.jpg');
+        }
+    }
+    @media only screen and (min-width:780px){
+        /* div.example{
+            display: none;
+            font-size: 80px;
+        } */
+        body{
+            background-color: whitesmoke;
+            background-image: url('1360279.png');
+        }
+    }
+    @media only screen and (min-width:880px){
+        body{
+            background-color: rgb(255, 0, 166);
+        }
+    }
+    @media only screen and (min-width:990px){
+        body{
+            background-color: rgb(255, 38, 0);
+        }
+    }
+    
+
+</style>
+<body>
+    hi hello
+    <div class="example"> hellooo bob</div>
+    <!-- <img src="1360279.png" width="560" height="345"> -->
+</body>
+</html>
