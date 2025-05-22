@@ -1,0 +1,78 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+#ed4d1a
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f7fcf4;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent !important;
+    color: rgb(10, 6, 6) !important;
+    z-index: 2;
+}
+
+.nav-pills {
+    position: relative;
+    /* background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+    background: rgb(8, 0, 0);
+    border-radius: 99px;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    width: fit-content;
+}
+
+.nav-pills .nav-link {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    color: rgb(244, 87, 236);
+    font-weight: 500;
+    border-radius: 99px;
+    transition: color 0.3s;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-pills::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: calc(100% / 4);
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 99px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-pills:has(#home-tab.active)::before {
+    transform: translateX(0%);
+}
+
+.nav-pills:has(#login-tab.active)::before {
+    transform: translateX(100%);
+}
+
+.nav-pills:has(#signup-tab.active)::before {
+    transform: translateX(200%);
+}
+
+.nav-pills:has(#register-tab.active)::before {
+    transform: translateX(300%);
+}

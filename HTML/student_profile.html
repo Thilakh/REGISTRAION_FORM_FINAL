@@ -7,12 +7,26 @@
     <title>Document</title>
 </head>
 <style>
-    .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+input, select, textarea {
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
-
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.row1,.tooltip {
+flex-basis: 50%; 
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+  text-align: right; 
+  position: relative;
+  float: right;
+}
 .avatar {
   vertical-align: middle;
   width: 50px;
@@ -31,52 +45,219 @@
     position: absolute;
     z-index: 1;
 }
+button{
+    border-radius: 15px;
+    
+}
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
     @media only screen and (max-width:600px){
         body{
-           background-image: url('demo3.jpg');
-            background-size: fill;
+           background-image: url('demo1.avif');
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+           height: 100vh;
         }
-
+        .cols-25{
+            width: 100%;
+            display: grid;
+        }
+       
+        .cols-75 {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: repeat(4, auto);
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+            margin-top: 0;
+        }
         button.submit-btn{
             background-color: aqua;
         }
+        input:disabled {
+            background-color: aqua;
+        }
+         button.submit-btn:hover{
+            background-color:rgba(56, 255, 252, 0.822);
+            color: white;
+        }
+        /* #a { grid-area: 1 / 1 / 2 / 2; }
+        label[for="a"] { grid-area: 1 / 2 / 2 / 3; }
+
+        #b { grid-area: 2 / 1 / 3 / 2; }
+        label[for="b"] { grid-area: 2 / 2 / 3 / 3; }
+
+        #c { grid-area: 3 / 1 / 4 / 2; }
+        label[for="c"] { grid-area: 3 / 2 / 4 / 3; }
+
+        #d { grid-area: 4 / 1 / 5 / 2; }
+        label[for="d"] { grid-area: 4 / 2 / 5 / 3; } */
     }
-    @media only screen and (min-width:768px){
+  
+    @media only screen and (min-width:600px) and (max-width: 1023px) {
         body{
-            background-image: url('demo1.avif');
-            background-size: fill;
+            background-image: url('demo3.jpg');
+             background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+           height: 100vh;
+        }
+        .cols-75 {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(4, auto);
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+            margin-top: 0;
         }
         button.submit-btn{
             background-color: red;
         }
+        input:disabled {
+            background-color: red;
+        }
+         button.submit-btn:hover{
+            background-color:rgba(160, 48, 48, 0.822);
+            color: white;
+        }
+        input, select, textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
     }
+    }
+
+    /* @media only screen and (min-width: 600px) and (max-width: 1023px) {
+    body {
+        background-image: url('demo3.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .cols-75 {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(4, auto);
+
+        gap: 15px;
+        width: 100%;
+    }
+
+    button.submit-btn {
+        background-color: red;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button.submit-btn:hover {
+        background-color: rgba(160, 48, 48, 0.822);
+    }
+
+    input:disabled {
+        background-color: red;
+        color: white;
+    }
+
+    input, select, textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #a { grid-area: 1 / 1 / 2 / 2; }
+        label[for="a"] { grid-area: 1 / 2 / 2 / 3; }
+
+        #b { grid-area: 2 / 1 / 3 / 2; }
+        label[for="b"] { grid-area: 2 / 2 / 3 / 3; }
+
+        #c { grid-area: 3 / 1 / 4 / 2; }
+        label[for="c"] { grid-area: 3 / 2 / 4 / 3; }
+
+        #d { grid-area: 4 / 1 / 5 / 2; }
+        label[for="d"] { grid-area: 4 / 2 / 5 / 3; }
+} */
+
     @media only screen and (min-width:1024px){
         body{
-            background-image: url('demo2.jpg');
-            background-size: fill;
+            background-image: url('demo2.avif');
+            background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+           height: 100vh;
         }
         button.submit-btn{
             background-color: yellowgreen;
         }
+        input:disabled {
+            background-color: yellowgreen;
+        }
+        button.submit-btn:hover{
+            background-color: rgb(198, 239, 117);
+            color: white;
+        }
+    }
+    /* div{
+        position: relative;
+        animation: mymove 4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+    @keyframes mymove {
+    from {left: 0px;}
+    to {left: 5px;}
+    } */
+    .form-container {
+            max-width: auto;
+            margin: 20px auto;
+            padding: 20px;
+            border-style: solid;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            /* display: flex; */
+            align-items: center;
     }
 </style>
 <body>
-    <div class="tooltip">
-        <img src="avatar1.avif" class="avatar">
-        <span class="tooltiptext">Thilakh</span>
-    </div>
     <div class="form-container">
         <form>
-            <div class="Row">
-                    <label>Name:</label>
-                    <input type="text" placeholder="Thilakh"/>
+            <div class="tooltip">
+                <img src="avatar1.avif" class="avatar">
+                <span class="tooltiptext">Thilakh</span>
+            </div>
+            <div class="row1">
+                    <label>Rank: II</label>
+                    <!-- <h2>II</h2> -->
+            </div>
+            <div class="row">
+                <div class="cols-25">
+                     <label for="name">Name:</label>
                 </div>
-                <div>
+                <div class="cols-75">
+                    <input type="text" id="name" value="Thilak" disabled/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cols-25">
                     <label>Class:</label>
+                </div>
+                <div class="cols-75">
                     <select>
                         <option value="I">I</option>
                         <option value="II">II</option>
@@ -92,8 +273,12 @@
                         <option value="XII">XII</option>
                     </select>
                 </div>
-                <div>
-                    <label>Section:</label>
+            </div>
+            <div class="row">
+                <div class="cols-25 section-label">
+                  <label>Section:</label>
+                </div>
+                <div class="cols-75">
                     <input type="radio" id="a" name="section" value="A"/>
                     <label for="a">A</label>
                     <input type="radio" id="b" name="section" value="B"/>
@@ -103,19 +288,19 @@
                     <input type="radio" id="d" name="section" value="D"/>
                     <label for="d">D</label>
                 </div>
-                <div>
+            </div>
+            <div class="row">
+                <div class="cols-25">
                     <label>School:</label>
-                    <textarea rows="4" cols="50"></textarea>
                 </div>
-                <div>
-                    <label>Rank:</label>
-                    <h2>II</h2>
+                <div class="cols-75">
+                    <textarea maxwidth="100%" rows="4" cols="50"></textarea>
                 </div>
             </div>
+            <div class="submit-b">
+               <button class="submit-btn"> submit</button>
+            </div>
         </form>
-        <div class="submit-b">
-           <button class="submit-btn"> submit</button>
-        </div>
     </div>
 </body>
 </html>
